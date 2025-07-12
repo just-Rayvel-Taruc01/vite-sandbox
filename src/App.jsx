@@ -28,7 +28,6 @@ export default function App() {
 
   const handleChange = (row, col, value) => {
     if (row !== currentRow || !/^[a-zA-Z]?$/.test(value)) return;
-
     const newGuesses = guesses.map((r) => [...r]);
     newGuesses[row][col] = value.toUpperCase();
     setGuesses(newGuesses);
@@ -99,7 +98,28 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white p-4">
-      <h1 className="text-3xl font-bold mb-6">Wordle Clone</h1>
+      <h1
+        aria-label="Wordle"
+        className="text-3xl font-extrabold mb-6 flex flex-wrap gap-1 justify-center"
+      >
+        {[
+          { letter: "W", color: "bg-green-500" },
+          { letter: "O", color: "bg-amber-300" },
+          { letter: "R", color: "bg-neutral-500" },
+          { letter: "D", color: "bg-green-500" },
+          { letter: "L", color: "bg-amber-300" },
+          { letter: "E", color: "bg-neutral-500" },
+        ].map(({ letter, color }, index) => (
+          <span
+            key={index}
+            className={`w-10 h-10 md:w-12 md:h-12 flex items-center justify-center text-white text-xl ${color}`}
+          >
+            {letter}
+          </span>
+        ))}
+      </h1>
+
+ 
       <div className="grid gap-2">
         {guesses.map((row, rowIndex) => (
           <div key={rowIndex} className="grid grid-cols-5 gap-2">
