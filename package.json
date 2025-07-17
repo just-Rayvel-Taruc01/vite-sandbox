@@ -6,10 +6,6 @@
   "description": "A Vite project with React and Tailwind CSS",
   "author": "ren ren",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/just-Rayvel-Taruc01/vite-sandbox.git"
-  },
   "keywords": [
     "vite",
     "react",
