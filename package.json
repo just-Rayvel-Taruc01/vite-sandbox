@@ -17,7 +17,7 @@
     "javascript",
     "frontend"
   ],
-  "homepage": "https://github.com/just-Rayvel-Taruc01/vite-sandbox",
+  "homepage": "https://just-rayvel-taruc01.github.io/vite-sandbox",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

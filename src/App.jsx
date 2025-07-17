@@ -7,7 +7,6 @@ function AppRoutes() {
   const location = useLocation();
 
   return (
-    // Force remount per route
     <Routes location={location} key={location.pathname}>
       <Route path="/" element={<Home />} />
       <Route path="/wordle" element={<Wordle />} />
@@ -18,7 +17,7 @@ function AppRoutes() {
 
 export default function App() {
   return (
-    <Router>
+    <Router basename="/vite-sandbox">
       <nav className="bg-blue-600 text-white p-4 flex items-center">
         <Link className="flex justify-start" to="/">vite-sandbox</Link>
         <div className="justify-end flex items-center gap-4 ml-auto">
