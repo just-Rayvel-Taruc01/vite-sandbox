@@ -25,7 +25,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "postbuild": "cp dist/index.html dist/404.html"
+    "postbuild": "cp dist\\index.html dist\\404.html"
   },
   "dependencies": {
     "@dr.pogodin/react-helmet": "^3.0.2",
