@@ -21,11 +21,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "cpy dist/index.html dist/404.html",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "postbuild": "cpy dist/index.html dist/404.html"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@dr.pogodin/react-helmet": "^3.0.2",
