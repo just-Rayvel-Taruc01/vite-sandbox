@@ -16,8 +16,9 @@ function AppRoutes() {
 }
 
 export default function App() {
+  const isProd = import.meta.env.MODE === "production";
   return (
-    <Router basename="/vite-sandbox/">
+    <Router basename={isProd ? "/vite-sandbox/" : "/"}>
       <nav className="bg-blue-600 text-white p-4 flex items-center">
         <Link className="flex justify-start" to="/">vite-sandbox</Link>
         <div className="justify-end flex items-center gap-4 ml-auto">
